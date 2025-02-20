@@ -23,7 +23,7 @@ export const generate = async (req, res) => {
           "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-3.5-large",
           { inputs: prompt },
           {
-            headers: { Authorization: `Bearer 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` },
+            headers: { Authorization: `Bearer ${process.env.HUGGING_FACE_API}` },
             responseType: "arraybuffer",
           }
         )
