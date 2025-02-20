@@ -1,12 +1,6 @@
-import { fal } from "@fal-ai/client";
 import { userModel } from "../models/user.model.js";
 import axios from "axios"
 
-fal.config({
-    credentials: process.env.FAL_KEY
-})
-const HUGGING_FACE_API_URL = "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-schnell";
-const HUGGING_FACE_API_KEY = process.env.HUGGING_FACE_API;
 
 export const generate = async (req, res) => {
     const { prompt, count } = req.body;
